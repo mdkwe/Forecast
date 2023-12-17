@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block navigation %}
+<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="ForecastNavbar">
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>
+</div>
+
+<div id="ForecastNavbar" class="navbar-menu">
+  <div class="navbar-start">
+
+    <a class="navbar-item"> Documentation </a>
+
+    <a class="navbar-item"> Contact </a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container has-text-centered">
+    <div class="columns is-flex is-text is-vcentered is-fullheight">
+      <div class="column is-two-fifths">
+        <div>
+          <figure class="image">
+            <img class="has-ratio" width="1280" height="720"
+              src="{{ url_for('static', filename='/img/html/walpaper.png') }}"></iframe>
+          </figure>
+        </div>
+      </div>
+
+      <div class="column">
+        <div>
+          <h1 class="title">Forecast</h1>
+          <h2 class="subtitle">Your Weather Companion</h2>
+          <p>
+            Welcome to Forecast, your go-to web app for current and forecast weather
+            information. Enter any location, and get real-time weather updates and
+            future forecasts.
+          </p>
+        </div>
+        <div class="field is-grouped mt-5">
+          <div class="control is-expanded ">
+            <input class="input" type="text" placeholder="Enter city name">
+          </div>
+          <div class="control">
+            <a href="{{ url_for('search') }}" class="button is-warning">Search</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+
+{% block navigation %}
+
+{% endblock %}
+<span class="icon has-text-black">
+  <i class="fa-solid fa-wind"></i>
+</span>
+{% block content %}
+
+<section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="field is-grouped " style="inline-size: 50%;">
+          <div class="control is-expanded ">
+            <input class="input" type="text" placeholder="Enter city name">
+          </div>
+          <div class="control">
+            <a href="{{ url_for('search') }}" class="button is-warning">Search</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs is-boxed is-centered">
+    <ul>
+      <li id="weather-tab" class="is-active">
+        <a onClick="switchToWeather()">
+          <span class="icon is-small"><i class="fa fa-wind"></i></span>
+          <span>Weather</span>
+        </a>
+      </li>
+      <li id="settings-tab">
+        <a onClick="switchToSettings()">
+          <span class="icon is-small"><i class="fa fa-gear"></i></span>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- Weather view -->
+  <div id="weather-tab-content">
+
+    <div class="container has-background-warning-light">
+
+      <section class="hero">
+        <div class="hero-body has-background-danger mt-3">
+
+          <div class="columns has-background-grey-light">
+            <div class="column is-four-fifths has-background-primary">
+
+              <section class="hero is-small">
+                <div class="column has-background-grey mb-5">
+                  <div class="has-background-black is-flex is-justify-content-right ">
+                    <div class="column is-two-thirds has-background-white">
+                      <div class="columns has-text-centered">
+                        <div class="column div-text-small"><span class="icon is-small"><i
+                              class="fa fa-location-dot"></i></span>
+                          <span>[city]</span>
+                        </div>
+                        <div class="column div-text-small"><span class="icon is-small"><i
+                              class="fa fa-calendar-days"></i></span>
+                          <span>[current.dt].date</span>
+                        </div>
+                        <div class="column div-text-small"><span class="icon is-small"><i
+                              class="fa fa-clock"></i></span>
+                          <span>[current.dt].hour</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="columns mb-3 mt-3">
+                    <div class="column is-half has-background-primary div-text has-text-right">
+                      <p>[current.temp]</p>
+                    </div>
+                    <div class="column has-background-info is-flex is-align-items-end">
+                      <div class="is-justify-content-center">
+                        <p class="div-text-small"><i class="fa-solid fa-droplet"
+                            style="margin-inline-end: 10px;"></i></span>[hourly.pop]</p>
+                        <p class="div-text-small"><i class="fa-solid fa-wind"
+                            style="margin-inline-end: 6px;"></i></span>[hourly.wind]</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns is-centered is-vcentered mt-5 mb-3">
+                    <div class="columns" style="inline-size: 25%;">
+                      <div class="columns has-background-grey-light" style="inline-size: 50%;">
+                        <div class="column is-half has-background-white">
+                          <figure class="image div-text" style="inline-size: 100%;">
+                            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                          </figure>
+                        </div>
+                        <div
+                          class="column has-background-white is-flex is-align-items-center is-justify-content-center ">
+                          <div>
+                            <p>[current.weather.description]</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+              <section class="hero">
+                <div class="hero-body has-background-link">
+                  <div class="columns has-background-grey-light">
+                    <div class="column border-day has-background-primary">
+                      <p><strong>Morning</strong></p>
+                      <br>
+                      <p>[daily.temp.morn]</p>
+                    </div>
+                    <div class="column border-day has-background-primary">
+                      <p><strong>Day</strong></p>
+                      <br>
+                      <p>[daily.temp.day]</p>
+                    </div>
+                    <div class="column border-day has-background-primary">
+                      <p><strong>Evening</strong></p>
+                      <br>
+                      <p>[daily.temp.eve]</p>
+                    </div>
+                    <div class="column has-background-primary">
+                      <p><strong>Night</strong></p>
+                      <br>
+                      <p>[daily.temp.night]</p>
+                    </div>
+                  </div>
+              </section>
+            </div>
+
+            <div class="column has-background-link is-flex-direction-column">
+              <div>
+                <p><strong class="has-text-white">7-Days Forecast</strong></p>
+                <hr>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+              <div class="column border-forecast has-background-primary">
+                <p><strong>Day</strong></p>
+                <div class="div-text-small">
+                  <p>[daily.temp.min]/[daily.temp.max]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+<!-- Settings view -->
+<div class="is-hidden" id="settings-tab-content">
+  <p class="mt-3" style="text-align:center;">Here will be the contents of the "Settings" tab</p>
+</div>
+</div>
+
+<script>
+  function switchToWeather() {
+    removeActive();
+    hideAll();
+    $("#weather-tab").addClass("is-active");
+    $("#weather-tab-content").removeClass("is-hidden");
+  }
+
+  function switchToSettings() {
+    removeActive();
+    hideAll();
+    $("#settings-tab").addClass("is-active");
+    $("#settings-tab-content").removeClass("is-hidden");
+  }
+
+  function removeActive() {
+    $("li").each(function () {
+      $(this).removeClass("is-active");
+    });
+  }
+
+  function hideAll() {
+    $("#weather-tab-content").addClass("is-hidden");
+    $("#settings-tab-content").addClass("is-hidden");
+  }
+
+</script>
+
+
+{% endblock %}

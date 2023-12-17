@@ -1,0 +1,26 @@
+.temp{
+      font-size: 800%;
+}
+
+#container {
+      display: inline-block;
+      background-color: green;
+      padding: 0.5vw 1vw;
+  }
+
+  .div-text {
+      display: table;
+      font-size: 6vw;
+  }
+  .div-text-small{
+      font-size: 80%;
+  }
+  .border-day{
+      border-inline-end-style: solid ;
+      border-inline-end-width: 1px;
+  }
+
+  .border-forecast{
+      border-block-end-style: solid ;
+      border-block-end-width: 1px;
+  }
