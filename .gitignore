@@ -1,3 +1,4 @@
+__pycache__
 venv/
-draft.py
 config.py
+test.ipynb

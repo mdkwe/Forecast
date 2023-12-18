@@ -1,3 +1,7 @@
+/* .autocomplete-container {
+    position: relative;
+} */
+
 .temp{
       font-size: 800%;
 }
@@ -24,3 +28,5 @@
       border-block-end-style: solid ;
       border-block-end-width: 1px;
   }
+  
+  /* Auto completed address Suggestions */

@@ -17,3 +17,5 @@ function hideAll() {
   $("#weather-tab-content").addClass("is-hidden");
   $("#settings-tab-content").addClass("is-hidden");
 }
+
+// Auto completed address Suggestions

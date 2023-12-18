@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Forecast</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <script
-      defer
-      src="{{ url_for('static', filename='js/script.js') }}"
-    ></script>
-    <script src="https://kit.fontawesome.com/6df0eb5f7c.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
-  </head>
 
-  <body>
-    <nav class="navbar has-background-link-light role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="{{ url_for('home') }}">
-          <img
-            src=" {{ url_for('static', filename='/img/html/logo_forecast.png' ) }}" />
-        </a>
-        <a class="navbar-item" href="{{ url_for('home') }}">
-          <strong class="is-uppercase" >Forecast</strong>
-        </a>
-        {% block navigation %}{% endblock %}
-      </div>
-    </nav>
-    {% block content %}{% endblock %}
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forecast</title>
 
-  <footer class="has-text-centered mt-5"> 
-    <small>&copy; 2023. Build with &hearts; by mdkwe. All Rights Reserved.</small>
-  </footer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="https://kit.fontawesome.com/6df0eb5f7c.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <nav class="navbar has-background-link-light role=" navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ url_for('home') }}">
+        <img src=" {{ url_for('static', filename='/img/html/logo_forecast.png' ) }}" />
+      </a>
+      <a class="navbar-item" href="{{ url_for('home') }}">
+        <strong class="is-uppercase">Forecast</strong>
+      </a>
+      {% block navigation %}{% endblock %}
+    </div>
+  </nav>
+  {% block content %}{% endblock %}
+</body>
+
+<footer class="has-text-centered mt-5">
+  <small>&copy; 2023. Build with &hearts; by mdkwe. All Rights Reserved.</small>
+</footer>
+
 </html>
