@@ -62,7 +62,7 @@
                         <div class="columns has-text-centered">
                           <div class="column div-text-small"><span class="icon is-small"><i
                                 class="fa fa-location-dot"></i></span>
-                            <span>{{city}}</span>
+                            <span>{{location.formatted}}</span>
                           </div>
                           <div class="column div-text-small"><span class="icon is-small"><i
                                 class="fa fa-calendar-days"></i></span>
@@ -78,7 +78,7 @@
 
                     <div class="columns mb-3 mt-3">
                       <div class="column is-half has-background-primary div-text has-text-right">
-                        <p>[current.temp]</p>
+                        <p>{{data['current']['temp']}}</p>
                       </div>
                       <div class="column has-background-info is-flex is-align-items-end">
                         <div class="is-justify-content-center">
@@ -100,7 +100,7 @@
                           <div
                             class="column has-background-white is-flex is-align-items-center is-justify-content-center ">
                             <div>
-                              <p>[current.weather.description]</p>
+                              <p>{{data['current']['weather']['description']}}</p>
                             </div>
                           </div>
                         </div>

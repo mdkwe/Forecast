@@ -13,20 +13,22 @@ def home():
 def search():
     if request.method == 'POST':
         city = request.form["city"]
-        return render_template('search.html', city=city)
-    else:
-        # Handle case where no results are found or there's an error
-        None
+        data = geocode(city)
+        if 'results' in data : 
+            locations = [{
+                'formatted': result['formatted'],
+                'lon': result['lon'],
+                'lat': result['lat']
+            } for result in data['results']]
+            look_city = locations[0] # TO DO : Make this choice dynamically
+            data = query_api(look_city['lon'], look_city['lat'])
+            return render_template('search.html', 
+                                location = look_city, 
+                                data = data)
+        else:
+            # Handle case where no results are found or there's an error
+            None
     return render_template('home.html')
-
-def autocomplete(city):
-    API_URL = ('https://api.geoapify.com/v1/geocode/autocomplete?text={}&limit=5&type=city&format=json&apiKey={}')
-    try:
-        data = requests.get(API_URL.format(city, API_KEY_GEO)).json()
-    except Exception as exc:
-        print(exc)
-        data = None
-    return data
 
 if __name__ == '__main__':
     app.run(debug=True)
