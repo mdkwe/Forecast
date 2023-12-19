@@ -41,14 +41,16 @@
             future forecasts.
           </p>
         </div>
-        <div class="field is-grouped mt-5">
-          <div class="control is-expanded ">
-            <input class="input" type="text" placeholder="Enter city name">
+        <form action="{{ url_for('search') }}" method="post">
+          <div class="field is-grouped mt-5">
+            <div class="control is-expanded">
+              <input class="input" type="text" name="city" id="city" placeholder="Enter city name">
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-warning">Search</button>
+            </div>
           </div>
-          <div class="control">
-            <a href="{{ url_for('home') }}" class="button is-warning">Search</a>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
