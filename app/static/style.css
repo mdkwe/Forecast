@@ -13,12 +13,16 @@
   }
 
   .div-text {
-      display: table;
       font-size: 6vw;
   }
   .div-text-small{
       font-size: 80%;
   }
+
+  .div-text-medium{
+    font-size: 100%;
+}
+
   .border-day{
       border-inline-end-style: solid ;
       border-inline-end-width: 1px;

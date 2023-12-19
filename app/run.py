@@ -13,22 +13,19 @@ def home():
 def search():
     if request.method == 'POST':
         city = request.form["city"]
-        data = geocode(city)
-        if 'results' in data : 
-            locations = [{
-                'formatted': result['formatted'],
-                'lon': result['lon'],
-                'lat': result['lat']
-            } for result in data['results']]
-            look_city = locations[0] # TO DO : Make this choice dynamically
-            data = query_api(look_city['lon'], look_city['lat'])
-            return render_template('search.html', 
-                                location = look_city, 
+        location = geocode(city)
+        data = query_api(location, unit = 'metric')
+        return render_template('search.html', 
+                                location = location, 
                                 data = data)
-        else:
-            # Handle case where no results are found or there's an error
-            None
+    else:
+        # Handle case where no results are found or there's an error
+        return render_template('home.html')
     return render_template('home.html')
+
+
+app.jinja_env.filters['format_datetime'] = format_datetime
+app.jinja_env.filters['convert_mps_to_kph'] = convert_mps_to_kph
 
 if __name__ == '__main__':
     app.run(debug=True)
