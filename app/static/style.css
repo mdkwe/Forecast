@@ -34,3 +34,6 @@
   }
   
   /* Auto completed address Suggestions */
+  .autocomplete-container {
+    position: relative;
+}

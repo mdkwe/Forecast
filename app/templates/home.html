@@ -41,10 +41,13 @@
             future forecasts.
           </p>
         </div>
-        <form action="{{ url_for('search') }}" method="post">
-          <div class="field is-grouped mt-5">
+        <form id="locationForm" action="{{ url_for('search') }}" method="post">
+          <div class=" field is-grouped mt-5 is-flex is-align-items-center">
             <div class="control is-expanded">
-              <input class="input" type="text" name="city" id="city" placeholder="Enter city name">
+              <div id="autocomplete" class="autocomplete-container"></div>
+              <input type="hidden" id="selectedCityName" name="cityName">
+              <input type="hidden" id="selectedCityLat" name="cityLat">
+              <input type="hidden" id="selectedCityLon" name="cityLon">
             </div>
             <div class="control">
               <button type="submit" class="button is-warning">Search</button>
@@ -55,5 +58,9 @@
     </div>
   </div>
 </section>
+<script>
+  const Geo_API = "{{ API_KEY_GEO }}";
+</script>
+<script src="{{ url_for('static', filename='script.js')}}"></script>
 
 {% endblock %}

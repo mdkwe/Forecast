@@ -11,6 +11,8 @@
 <section class="hero is-link">
   <div class="hero-body">
     <div class="column is-flex is-justify-content-center is-align-content-center">
+      
+      <!-- TO DO : Autocomplete the input box with geoapify-->
       <form action="{{ url_for('search') }}" method="post">
         <div class="field is-grouped">
           <div class="control is-expanded">
@@ -21,6 +23,7 @@
           </div>
         </div>
       </form>
+
     </div>
   </div>
 
@@ -57,9 +60,9 @@
                 <div class="column is-flex is-justify-content-right">
                   <div class="column is-three-fifths">
                     <div class="columns has-text-centered">
-                      <div class="column div-text-small"><span class="icon is-small"><i
+                      <div class="column  is-three-fifths div-text-small"><span class="icon is-small"><i
                             class="fa fa-location-dot"></i></span>
-                        <span>{{location.name[0]}}, {{location.name[2]}}</span>
+                        <span>{{location.name}}</span>
                       </div>
                       <div class="column div-text-small"><span class="icon is-small"><i
                             class="fa fa-calendar-days"></i></span>
