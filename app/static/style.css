@@ -27,11 +27,6 @@
       border-inline-end-style: solid ;
       border-inline-end-width: 1px;
   }
-
-  .border-forecast{
-      border-block-end-style: solid ;
-      border-block-end-width: 1px;
-  }
   
   /* Auto completed address Suggestions */
   .autocomplete-container {

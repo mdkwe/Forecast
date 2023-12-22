@@ -1,21 +1,30 @@
 {% extends "layout.html" %}
 
 {% block navigation %}
-<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="ForecastNavbar">
-  <span aria-hidden="true"></span>
-  <span aria-hidden="true"></span>
-  <span aria-hidden="true"></span>
-</a>
-</div>
-
-<div id="ForecastNavbar" class="navbar-menu">
-  <div class="navbar-start">
-
-    <a class="navbar-item"> Documentation </a>
-
-    <a class="navbar-item"> Contact </a>
+<nav class="navbar has-background-link-light role=" navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ url_for('home') }}">
+      <img src=" {{ url_for('static', filename='/img/html/logo_forecast.png' ) }}" />
+    </a>
+    <a class="navbar-item" href="{{ url_for('home') }}">
+      <strong class="is-uppercase">Forecast</strong>
+    </a>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="ForecastNavbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
-</div>
+
+  <div id="ForecastNavbar" class="navbar-menu">
+    <div class="navbar-start">
+
+      <a class="navbar-item"> Documentation </a>
+
+      <a class="navbar-item"> Contact </a>
+    </div>
+  </div>
+</nav>
 {% endblock %}
 
 {% block content %}

@@ -16,17 +16,9 @@
 </head>
 
 <body>
-  <nav class="navbar has-background-link-light role=" navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="{{ url_for('home') }}">
-        <img src=" {{ url_for('static', filename='/img/html/logo_forecast.png' ) }}" />
-      </a>
-      <a class="navbar-item" href="{{ url_for('home') }}">
-        <strong class="is-uppercase">Forecast</strong>
-      </a>
-      {% block navigation %}{% endblock %}
-    </div>
-  </nav>
+
+  {% block navigation %}{% endblock %}
+
   {% block content %}{% endblock %}
 </body>
 

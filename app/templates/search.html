@@ -1,49 +1,17 @@
 {% extends "layout.html" %}
 
 {% block navigation %}
-
+<nav class="navbar has-background-link-light role=" navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item is-align-content-end" href="{{ url_for('home') }}">
+      <span class="icon is-small" style="margin-inline-end: 10px;"><i class="fa fa-home"></i></span>
+      <p class="is-bold">Return to home page</p>
+    </a>
+  </div>
+</nav>
 {% endblock %}
-<span class="icon has-text-black">
-  <i class="fa-solid fa-wind"></i>
-</span>
+
 {% block content %}
-
-<section class="hero is-link">
-  <div class="hero-body">
-    <div class="column is-flex is-justify-content-center is-align-content-center">
-      
-      <!-- TO DO : Autocomplete the input box with geoapify-->
-      <form action="{{ url_for('search') }}" method="post">
-        <div class="field is-grouped">
-          <div class="control is-expanded">
-            <input class="input" type="text" name="city" id="city" placeholder="Enter city name">
-          </div>
-          <div class="control">
-            <button type="submit" class="button is-warning">Search</button>
-          </div>
-        </div>
-      </form>
-
-    </div>
-  </div>
-
-  <div class="tabs is-boxed is-centered">
-    <ul>
-      <li id="weather-tab" class="is-active">
-        <a onClick="switchToWeather()">
-          <span class="icon is-small"><i class="fa fa-wind"></i></span>
-          <span>Weather</span>
-        </a>
-      </li>
-      <li id="settings-tab">
-        <a onClick="switchToSettings()">
-          <span class="icon is-small"><i class="fa fa-gear"></i></span>
-          <span>Settings</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
 
 <div class="container">
 
@@ -58,17 +26,18 @@
             <div class="column">
               <div class="columns has-background-link-dark has-text-white has-text-weight-bold">
                 <div class="column is-flex is-justify-content-right">
-                  <div class="column is-three-fifths">
-                    <div class="columns has-text-centered">
-                      <div class="column  is-three-fifths div-text-small"><span class="icon is-small"><i
-                            class="fa fa-location-dot"></i></span>
-                        <span>{{location.name}}</span>
-                      </div>
+                  <div class="column">
+                    <div class="columns has-text-center">
                       <div class="column div-text-small"><span class="icon is-small"><i
-                            class="fa fa-calendar-days"></i></span>
+                            class="fa fa-location-dot "></i></span>
+                        <span class="div-text-medium">{{location.name}}</span>
+                      </div>
+                      <div class="column is-one-fifth div-text-small"><span class="icon is-small"
+                          style="margin-inline-end: 10px;"><i class="fa fa-calendar-days"></i></span>
                         <span>{{ data['current']['dt'] | format_datetime(data["timezone"], 'date')}}</span>
                       </div>
-                      <div class="column div-text-small"><span class="icon is-small"><i class="fa fa-clock"></i></span>
+                      <div class="column is-one-fifth div-text-small"><span class="icon is-small"><i
+                            class="fa fa-clock"></i></span>
                         <span>{{ data['current']['dt'] | format_datetime(data["timezone"], 'hour') }}</span>
                       </div>
                     </div>
@@ -79,8 +48,10 @@
                 <div class="column">
                   <div class="columns mt-3">
                     <div class="column is-half has-text-right border-day">
-                      <div class="m-auto div-text"> <p>{{data['current']['temp']|round }}°C</p></div>
-                      
+                      <div class="m-auto div-text">
+                        <p>{{data['current']['temp']|round }}°C</p>
+                      </div>
+
                     </div>
                     <div class="column is-flex is-align-items-end">
                       <div class="is-justify-content-center">
@@ -220,14 +191,6 @@
     </div>
   </div>
 
-</div>
-</div>
-
-
-<!-- Settings view -->
-<div class="is-hidden" id="settings-tab-content">
-  <p class="mt-3" style="text-align:center;">Here will be the contents of the "Settings" tab</p>
-</div>
 </div>
 
 <script>
