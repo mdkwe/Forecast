@@ -1,6 +1,3 @@
-/* .autocomplete-container {
-    position: relative;
-} */
 
 .temp{
       font-size: 800%;
@@ -31,4 +28,21 @@
   /* Auto completed address Suggestions */
   .autocomplete-container {
     position: relative;
+    border: 1px solid #4C35BD;
+    background: #4C35BD;
+    text-align: center;
+    padding-right: 2%;
 }
+
+.wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .day-forecast{
+    color: #4C35BD;
+    font-size: 14px;
+  }
