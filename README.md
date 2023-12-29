@@ -1,72 +1,74 @@
-
 # Weather Forecast Application
 
 ## Project Overview
-This Weather Forecast Application is a web-based tool that provides users with current and future weather information. Utilizing APIs like Geoapify for location-based services and OpenWeatherMap for weather data, the app offers an intuitive interface with autocomplete functionality for city names.
+The Weather Forecast Application is a web-based tool providing current and future weather information. Leveraging APIs like [Geoapify](https://www.geoapify.com/) for geolocation services and [OpenWeatherMap](https://openweathermap.org/api) for weather data, this app features an intuitive interface with autocomplete functionality for searching city names.
 
 ## Interface Screenshots
 
-Here are some screenshots of the Weather Forecast Application interface:
+Here are some screenshots showcasing the interface:
 
-![Forecast. Home page.](app/static/img/html/Forecast_Home.png)
-![Forecast. Search page example.](app/static/img/html/Forecast_Search.png)
+- ![Forecast. Home page.](app/static/img/html/Forecast_Home.png)
+- ![Forecast. Search page example.](app/static/img/html/Forecast_Search.png)
 
 ## Live Preview
 
-You can access a live preview of the application hosted on Google Cloud here: [Weather Forecast Application Preview](URL_TO_GOOGLE_CLOUD_PREVIEW)
-
+Access a live preview of the application, hosted on Google Cloud: [Weather Forecast Application Preview](URL_TO_GOOGLE_CLOUD_PREVIEW)
 
 ## Input/Output Model of the Backend
 
 ### Input:
-- **City Name**: User inputs the name of the city for which they want weather information.
+- **City Name**: User input for the desired city's weather information.
 
 ### Process:
-- **Geocoding**: The app uses the Geoapify API to convert the city name into geographical coordinates (latitude and longitude).
-- **Weather Data Retrieval**: Using the coordinates, the app fetches weather data from the OpenWeatherMap API.
+- **Geocoding**: Utilizing the [Geoapify API](https://www.geoapify.com/) to convert city names into geographical coordinates.
+- **Weather Data Retrieval**: Fetching weather data from [OpenWeatherMap API](https://openweathermap.org/api) using coordinates.
 
 ### Output:
-- **Weather Information**: The app displays weather information including temperature, humidity, wind speed, etc., for the selected location.
+- **Weather Information**: Displaying data such as temperature, humidity, and wind speed for the selected location.
 
 ## Installation and Setup
-Instructions on setting up the project locally. This includes steps to clone the repository, install dependencies, and any required environment setup.
-To set up the Weather Forecast Application locally, follow these steps:
-1. Clone the Repository (Skip this step if you have the project files already):
+
+To set up the project locally:
+
+1. **Clone the Repository**:
 ```bash
 git clone [repository-url]
 cd [project-directory]
 ```
-2. Create a Virtual Environment:
-- For Unix or MacOS:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-- For Windows:
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-3.Install Dependencies
+
+2. **Create a Virtual Environment**:
+- Unix/MacOS:
+  ```
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+- Windows:
+  ```
+  python -m venv venv
+  venv\\Scripts\\activate
+  ```
+
+3. **Install Dependencies**:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. create a config.py with API keys from ...
+4. **Create `config.py` for API Keys**:
 ```python
 # config.py
-API_KEY_WEATHER ='[complete with your API KEYS from OpenWeather]'
-API_KEY_GEO = '[complete with your API KEYS from Geoapify]'
-API_KEY_MAIL = '[complete with your API KEYS from Web3forms]'
+API_KEY_WEATHER = '[Your OpenWeather API Key]'
+API_KEY_GEO = '[Your Geoapify API Key]'
+API_KEY_MAIL = '[Your Web3forms API Key]'
 ```
 
 4.Run the Application
 ```bash
-python run.py
+python app/run.py
 ```
+
 ## TO DO List (Future Enhancements)
 
-- [ ] Implement User Authentication for personalized experiences..
+- [ ] Implement User Authentication for personalized experiences as message for daily update about weather.
 - [ ] Implement additional error handling and validation for user inputs.
 - [ ] Develop a mobile-responsive design.
 - [ ] Optimize API usage to reduce load times
