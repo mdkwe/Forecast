@@ -8,8 +8,8 @@ This Weather Forecast Application is a web-based tool that provides users with c
 
 Here are some screenshots of the Weather Forecast Application interface:
 
-![Screenshot 1 Description](URL_TO_SCREENSHOT_1)
-![Screenshot 2 Description](URL_TO_SCREENSHOT_2)
+![Forecast. Home page.](app/static/img/html/Forecast_Home.png)
+![Forecast. Search page example.](app/static/img/html/Forecast_Search.png)
 
 ## Live Preview
 
@@ -51,6 +51,15 @@ venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+
+3. create a config.py with API keys from ...
+```python
+# config.py
+API_KEY_WEATHER ='[complete with your API KEYS from OpenWeather]'
+API_KEY_GEO = '[complete with your API KEYS from Geoapify]'
+API_KEY_MAIL = '[complete with your API KEYS from Web3forms]'
+```
+
 4.Run the Application
 ```bash
 python run.py
