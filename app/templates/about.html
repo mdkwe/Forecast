@@ -1,0 +1,223 @@
+{% extends "layout.html" %}
+
+{% block navigation %}
+<nav class="navbar has-background-link-light role=" navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+            <a class="navbar-item" href="{{ url_for('home') }}">
+                  <img src=" {{ url_for('static', filename='/img/html/logo_forecast.png' ) }}" />
+            </a>
+            <a class="navbar-item" href="{{ url_for('home') }}">
+                  <strong class="is-uppercase">Forecast</strong>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                  data-target="ForecastNavbar">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+            </a>
+      </div>
+
+      <div id="ForecastNavbar" class="navbar-menu">
+            <div class="navbar-start">
+
+                  <a class="navbar-item" href="{{ url_for('about') }}"> About this project </a>
+
+                  <a class="navbar-item" href="{{ url_for('contact') }}"> Contact </a>
+            </div>
+      </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container mt-5 ">
+      <!-- Toggle Button -->
+      <div class="language-toggle has-text-centered">
+            <button id="switchButton" class="button is-warning">Switch to English</button>
+      </div>
+
+      <!-- START ARTICLE FEED -->
+      <section class="articles">
+            <div class="column is-8 is-offset-2">
+                  <!-- START ARTICLE -->
+                  <div class="card article" id="frenchContent" style="display: blocks;">
+                        <div class="card-content">
+                              <div class="media">
+                                    <div class="media-content has-text-centered">
+                                          <p class="title article-title">Kombucha, code et cumulonimbus !
+                                          </p>
+                                          <div class="tags has-addons level-item">
+                                                <span class="tag is-rounded"><a
+                                                            href="https://www.linkedin.com/in/michelle-dkwe/"
+                                                            target="_blank">@mdkwe</a></span>
+                                                <span class="tag is-rounded is-info">29 décembre, 2023</span>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="content article-body">
+                                    <p>
+                                          Le 10 décembre 2023, armée d'un verre de <a href="https://fousdelile.fr/"
+                                                target="_blank">kombucha Fous de l'île</a> et d'une détermination sans
+                                          faille, j'ai plongé tête la première dans l'aventure de la création de ma
+                                          première application web. Mon but ? Intégrer au moins une API externe et, si
+                                          possible, ne pas casser Internet en le faisant. C'est ainsi que j'ai découvert
+                                          <a href="https://openweathermap.org/api" target="_blank">l'API Open
+                                                WeatherMap</a>, un peu comme on trouve un billet de 20 euros dans une
+                                          vieille veste : totalement par hasard, mais ô combien réjouissant.
+
+                                          Dans cette quête, j'ai jonglé avec une panoplie d'outils gratuits, parce que,
+                                          soyons honnêtes, pourquoi payer quand on peut faire les choses brillamment
+                                          sans débourser un centime ?
+                                    </p>
+
+                                    <p>
+                                          Ce projet a été l'occasion de naviguer à travers une mer d'outils gratuits et
+                                          accessibles :
+                                    <ul>
+                                          <li><a href="https://www.canva.com/" target="_blank">Canva</a> pour donner à
+                                                mon application un look digne d'une star d'Hollywood (ou presque).</li>
+                                          <li><a href="https://flask.palletsprojects.com/" target="_blank">Flask avec
+                                                      Jinja2</a> pour manipuler le backend comme un chef d'orchestre un
+                                                peu geek.</li>
+                                          <li><a href="https://bulma.io/" target="_blank">Bulma</a>, une bibliothèque
+                                                CSS élégante. Parce que même dans le code, on a le droit d'être stylé.
+                                          </li>
+                                          <li><a href="https://www.geoapify.com/" target="_blank">Geoapify</a> pour
+                                                transformer des adresses en coordonnées géographiques - un peu comme de
+                                                la magie, mais sans baguette.</li>
+                                          <li><a href="https://openweathermap.org/api"
+                                                      target="_blank">OpenWeatherMap</a> pour parler météo avec plus de
+                                                précision qu'une mamie devant sa fenêtre.</li>
+                                          <li><a href="https://web3forms.com/" target="_blank">Web3Forms</a> pour des
+                                                formulaires de contact qui ne font pas fuir les utilisateurs.</li>
+                                    </ul>
+                                    </p>
+
+                                    <p>
+                                          Bien sûr, l'app n'est pas encore parfaite - un peu comme ma capacité à
+                                          résister à un troisième cookie. Mais, j'ai atteint mon objectif initial et
+                                          appris plus que je n'aurais jamais cru.
+                                    </p>
+
+                                    <p>
+                                          Et voilà la leçon à retenir : dans le vaste monde du web, les ressources sont
+                                          comme les étoiles dans le ciel - abondantes et souvent gratuites. La clé n'est
+                                          pas de tout savoir, mais de savoir chercher et transformer chaque défi en
+                                          opportunité d'apprentissage.
+                                    </p>
+
+                                    <p>
+                                          Pour mes prochaines aventures, je balance entre créer un tableau de bord pour
+                                          suivre mes positions en bourse ou trouver des astuces pour voyager de
+                                          façon économique et éco-responsable. Quelle que soit la direction choisie, je
+                                          suis armée de
+                                          connaissances et d'expériences précieuses grâce à ce projet. Et un peu plus
+                                          prête à conquérir le monde numérique, une ligne de code à la fois.
+                                    </p>
+
+                              </div>
+
+                        </div>
+                        <!-- END ARTICLE -->
+                  </div>
+
+                  <div class="card article" id="englishContent" style="display: none;">
+                        <div class="card-content">
+                              <div class="media">
+                                    <div class="media-content has-text-centered">
+                                          <p class="title article-title">Kombucha, code and cumulonimbus !
+                                          </p>
+                                          <div class="tags has-addons level-item">
+                                                <span class="tag is-rounded"><a
+                                                            href="https://www.linkedin.com/in/michelle-dkwe/"
+                                                            target="_blank">@mdkwe</a></span>
+                                                <span class="tag is-rounded is-info">December 29, 2023</span>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="content article-body">
+                                    <p>
+                                          On December 10, 2023, armed with a glass of <a href="https://fousdelile.fr/"
+                                                target="_blank">Fous de l'île kombucha</a> and unwavering determination,
+                                          I dove headfirst into the adventure of creating my first web application.
+                                    </p>
+                                    <p> My goal? To integrate at least one external API and, if possible, not to break
+                                          the Internet while doing it. That's how I discovered <a
+                                                href="https://openweathermap.org/api" target="_blank">the OpenWeatherMap
+                                                API</a>, a bit like finding a 20 euro bill in an old jacket: totally by
+                                          chance, but oh so exhilarating.
+                                    </p>
+                                    <p>
+                                          In this quest, I juggled a plethora of free tools, because let's be honest,
+                                          why pay when you can brilliantly do things without spending a dime?
+                                    <ul>
+                                          <li><a href="https://www.canva.com/" target="_blank">Canva</a> to give my
+                                                application a look worthy of a Hollywood star (or almost).</li>
+                                          <li><a href="https://flask.palletsprojects.com/" target="_blank">Flask with
+                                                      Jinja2</a> to handle the backend like a slightly geeky orchestra
+                                                conductor.</li>
+                                          <li><a href="https://bulma.io/" target="_blank">Bulma</a>, an elegant CSS
+                                                library. Because even in code, we have the right to be stylish.</li>
+                                          <li><a href="https://www.geoapify.com/" target="_blank">Geoapify</a> for
+                                                transforming addresses into geographical coordinates - kind of like
+                                                magic, but without a wand.</li>
+                                          <li><a href="https://openweathermap.org/api"
+                                                      target="_blank">OpenWeatherMap</a> for
+                                                discussing the weather with
+                                                more precision than a grandma in front of her window.</li>
+                                          <li><a href="https://web3forms.com/" target="_blank">Web3Forms</a> for contact
+                                                forms that don't scare users away.</li>
+                                    </ul>
+                                    </p>
+                                    <p>
+                                          Of course, the app isn't perfect yet - a bit like my ability to resist a third
+                                          cookie. But, I've reached my initial goal and learned more than I ever thought
+                                          I would.
+                                    </p>
+                                    <p>
+                                          And here's the lesson to remember: in the vast world of the web, resources are
+                                          like stars in the sky - abundant and often free. The key isn't to know
+                                          everything, but to know how to search and turn each challenge into a learning
+                                          opportunity.
+                                    </p>
+                                    <p>
+                                          For my next adventures, I'm torn between creating a dashboard to track my
+                                          stock market positions or finding tips for traveling economically and
+                                          eco-responsibly. Whatever direction I choose, the knowledge and experiences
+                                          gained from this project will be a valuable asset. And I'm a little more ready
+                                          to conquer the digital world, one line of code at a time.
+                                    </p>
+                              </div>
+
+                        </div>
+                        <!-- END ARTICLE -->
+                  </div>
+            </div>
+      </section>
+      <!-- END ARTICLE FEED -->
+</div>
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+            var switchButton = document.getElementById('switchButton');
+            var frenchContent = document.getElementById('frenchContent');
+            var englishContent = document.getElementById('englishContent');
+
+            switchButton.addEventListener('click', function () {
+                  if (frenchContent.style.display === 'none') {
+                        frenchContent.style.display = 'block';
+                        englishContent.style.display = 'none';
+                        switchButton.textContent = 'Switch to English';
+                  } else {
+                        frenchContent.style.display = 'none';
+                        englishContent.style.display = 'block';
+                        switchButton.textContent = 'Passer au français';
+                  }
+            });
+      });
+</script>
+
+
+
+{% endblock %}

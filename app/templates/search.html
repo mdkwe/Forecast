@@ -85,7 +85,7 @@
               </div>
               <div class="columns has-background-link-light">
                 <div class="column border-day">
-                  <p><strong>Tomorrow</strong></p>
+                  <p class="day-forecast"><strong>Tomorrow</strong></p>
                   <div class="is-flex is-justify-content-center ">
                     <div class="image is-64x64">
                       <img
@@ -100,12 +100,13 @@
                     </div>
                     <div class="column is-flex is-align-items-center">
                       <p class="has-text-centered div-text-small">
-                        {{data['daily'][1]['temp']['min']|round }}°/{{data['daily'][1]['temp']['max']|round }}°</p>
+                        <span class="has-text-grey-light">{{data['daily'][1]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][1]['temp']['max']|round }}°</span>
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="column border-day">
-                  <p><strong>{{ data['daily'][2]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
+                  <p class="day-forecast"><strong>{{ data['daily'][2]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
                   <div class="is-flex is-justify-content-center ">
                     <div class="image is-64x64">
                       <img
@@ -120,12 +121,13 @@
                     </div>
                     <div class="column is-flex is-align-items-center">
                       <p class="has-text-centered div-text-small">
-                        {{data['daily'][2]['temp']['min']|round }}°/{{data['daily'][2]['temp']['max']|round }}°</p>
+                        <span class="has-text-grey-light">{{data['daily'][2]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][2]['temp']['max']|round }}°</span>
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="column border-day">
-                  <p><strong>{{ data['daily'][3]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
+                  <p class="day-forecast"><strong>{{ data['daily'][3]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
                   <div class="is-flex is-justify-content-center ">
                     <div class="image is-64x64">
                       <img
@@ -140,12 +142,13 @@
                     </div>
                     <div class="column is-flex is-align-items-center">
                       <p class="has-text-centered div-text-small">
-                        {{data['daily'][3]['temp']['min']|round }}°/{{data['daily'][3]['temp']['max']|round }}°</p>
+                        <span class="has-text-grey-light">{{data['daily'][3]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][3]['temp']['max']|round }}°</span>
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="column border-day">
-                  <p><strong>{{ data['daily'][4]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
+                  <p class="day-forecast"><strong>{{ data['daily'][4]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
                   <div class="is-flex is-justify-content-center ">
                     <div class="image is-64x64">
                       <img
@@ -160,12 +163,13 @@
                     </div>
                     <div class="column is-flex is-align-items-center">
                       <p class="has-text-centered div-text-small">
-                        {{data['daily'][4]['temp']['min']|round }}°/{{data['daily'][4]['temp']['max']|round }}°</p>
+                        <span class="has-text-grey-light">{{data['daily'][4]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][4]['temp']['max']|round }}°</span>
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="column">
-                  <p><strong>{{ data['daily'][5]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
+                  <p class="day-forecast"><strong>{{ data['daily'][5]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
                   <div class="is-flex is-justify-content-center ">
                     <div class="image is-64x64">
                       <img
@@ -180,7 +184,8 @@
                     </div>
                     <div class="column is-flex is-align-items-center">
                       <p class="has-text-centered div-text-small">
-                        {{data['daily'][5]['temp']['min']|round }}°/{{data['daily'][5]['temp']['max']|round }}°</p>
+                        <span class="has-text-grey-light">{{data['daily'][5]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][5]['temp']['max']|round }}°</span>
+                      </p>
                     </div>
                   </div>
                 </div>

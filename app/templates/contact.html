@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block navigation %}
+<nav class="navbar has-background-link-light role=" navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+            <a class="navbar-item" href="{{ url_for('home') }}">
+                  <img src=" {{ url_for('static', filename='/img/html/logo_forecast.png' ) }}" />
+            </a>
+            <a class="navbar-item" href="{{ url_for('home') }}">
+                  <strong class="is-uppercase">Forecast</strong>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                  data-target="ForecastNavbar">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+            </a>
+      </div>
+
+      <div id="ForecastNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                  <a class="navbar-item" href="{{ url_for('about') }}"> About this project </a>
+                  <a class="navbar-item" href="{{ url_for('contact') }}"> Contact </a>
+            </div>
+      </div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container mt-5">
+      <div class="columns is-justify-content-center">
+            <div class="column is-6-tablet is-5-desktop is-4-widescreen is-3-fullh">
+                  <form method="POST" action="https://api.web3forms.com/submit" class="box p-5">
+
+                        <input type="hidden" name="access_key" value="{{API_KEY_MAIL}}">
+
+                        <label class="is-block mb-4">
+                              <span class="is-block mb-2">Your name</span> 
+                              <input required name="name" type="text" class="input" placeholder="Joe Bloggs" />
+                        </label>
+
+                        <label class="is-block mb-4">
+                              <span class="is-block mb-2">Email address</span>
+                              <input required name="email" type="email" class="input"
+                                    placeholder="joe.bloggs@example.com" />
+                        </label>
+
+                        <label class="is-block mb-4">
+                              <span class="is-block mb-2">Message</span>
+                              <textarea required name="message" class="textarea" rows="3"
+                                    placeholder="Tell us what you're thinking about this website..."></textarea>
+                        </label>
+                        <div class="mb-4">
+                              <button type="submit" class="button is-link px-4">Submit Form</button>
+                        </div>
+                  </form>
+
+                  <script src="https://web3forms.com/client/script.js" async defer></script>
+            </div>
+      </div>
+</div>
+
+
+
+{% endblock %}
