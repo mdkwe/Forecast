@@ -53,7 +53,7 @@ cd [project-directory]
 pip install -r requirements.txt
 ```
 
-4. **Create `config.py` for API Keys**:
+4. **Create `config.py` in app folder for API Keys**:
 ```python
 # config.py
 API_KEY_WEATHER = '[Your OpenWeather API Key]'

@@ -31,14 +31,14 @@
     border: 1px solid #4C35BD;
     background: #4C35BD;
     text-align: center;
-    padding-right: 2%;
+    padding-inline-end: 2%;
 }
 
 .wrap{
-    width: 30%;
+    inline-size: 30%;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
     transform: translate(-50%, -50%);
   }
 
