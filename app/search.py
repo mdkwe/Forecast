@@ -25,9 +25,9 @@ def format_datetime(unix_timestamp, timezone, type='date'):
     dt = datetime.fromtimestamp(unix_timestamp, tz)
 
     if type == "date":
-        return dt.strftime('%d/%m')
+        return dt.strftime('%a %d/%m')
     elif type == 'hour':
-        return dt.strftime('%H:%M')
+        return dt.strftime('%H:%M:%S')
     else:
         # Default or fallback format, can be adjusted as needed
         return dt.strftime('%Y-%m-%d %H:%M:%S')
