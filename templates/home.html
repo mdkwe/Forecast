@@ -40,29 +40,29 @@
         </div>
       </div>
 
-      <div class="column">
-        <div>
-          <h1 class="title">Forecast</h1>
-          <h2 class="subtitle">Your Weather Companion</h2>
-          <p>
-            Welcome to Forecast, your go-to web app for current and forecast weather
-            information. Enter any location, and get real-time weather updates and
-            future forecasts.
-          </p>
-        </div>
-        <form id="locationForm" action="{{ url_for('search') }}" method="post">
-          <div class="field is-grouped mt-5 is-flex is-align-items-center">
-            <div class="control is-expanded">
-              <div id="autocomplete" class="address-field autocomplete-container"></div>
-              <input type="hidden" id="selectedCityName" name="cityName">
-              <input type="hidden" id="selectedCityLat" name="cityLat">
-              <input type="hidden" id="selectedCityLon" name="cityLon">
-            </div>
-            <div class="control">
-              <button id="locationForm" type="submit" class="button is-warning">Search</button>
-            </div>
+      <div class="column is-flex is-flex-direction-column is-justify-content-center">
+          <div>
+            <h1 class="title">Forecast</h1>
+            <h2 class="subtitle">Your Weather Companion</h2>
+            <p>
+              Welcome to Forecast, your go-to web app for current and forecast weather
+              information. Enter any location, and get real-time weather updates and
+              future forecasts.
+            </p>
           </div>
-        </form>
+          <form id="locationForm" action="{{ url_for('search') }}" method="post">
+            <div class="field is-grouped mt-5 is-flex is-align-items-center">
+              <div class="control is-expanded">
+                <div id="autocomplete" class="address-field autocomplete-container"></div>
+                <input type="hidden" id="selectedCityName" name="cityName">
+                <input type="hidden" id="selectedCityLat" name="cityLat">
+                <input type="hidden" id="selectedCityLon" name="cityLon">
+              </div>
+              <div class="control">
+                <button id="locationForm" type="submit" class="button is-warning">Search</button>
+              </div>
+            </div>
+          </form>
       </div>
     </div>
   </div>
