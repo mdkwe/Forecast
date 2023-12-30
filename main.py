@@ -1,15 +1,18 @@
 from flask import Flask, request, jsonify, render_template
+import os
 import config
 from search import *
 
 app = Flask(__name__)
-app.config.from_object(config)
 
+# import API KEYS
+API_KEY_GEO = os.getenv("API_KEY_GEO")
+API_KEY_MAIL = os.getenv("API_KEY_MAIL")
 
 @app.route('/')
 def home():
     return render_template('home.html',
-                           API_KEY_GEO = app.config['API_KEY_GEO'])
+                           API_KEY_GEO =API_KEY_GEO)
 
 @app.route('/about')
 def about():
@@ -18,7 +21,7 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.html',
-                           API_KEY_MAIL = app.config['API_KEY_MAIL'])
+                           API_KEY_MAIL = API_KEY_MAIL)
 
 @app.route('/search', methods=['POST'])
 def search():

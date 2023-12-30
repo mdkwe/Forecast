@@ -1,7 +1,7 @@
 __pycache__
+.env
 venv/
-config.py
 .vscode
-lib
-app.yaml
-appengine_config.py
+# lib
+# app.yaml
+# appengine_config.py
