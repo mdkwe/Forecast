@@ -53,9 +53,8 @@ cd Forecast
 pip install -r requirements.txt
 ```
 
-4. **Create `config.py` in app folder for API Keys**:
+4. **Create `.env`files in the app folder for API Keys**:
 ```python
-# config.py
 API_KEY_WEATHER = '[Your OpenWeather API Key]'
 API_KEY_GEO = '[Your Geoapify API Key]'
 API_KEY_MAIL = '[Your Web3forms API Key]'
