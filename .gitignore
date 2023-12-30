@@ -2,3 +2,6 @@ __pycache__
 venv/
 config.py
 .vscode
+lib
+app.yaml
+appengine_config.py
