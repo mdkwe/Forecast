@@ -46,7 +46,7 @@
               </div>
               <section class="hero is-small">
                 <div class="column">
-                  <div class="columns mt-3">
+                  <div class="columns mt-3 is-flex is-align-items-center">
                     <div class="column is-half has-text-right border-day">
                       <div class="m-auto div-text">
                         <p>{{data['current']['temp']|round }}°C</p>
@@ -67,7 +67,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="columns is-vcentered ">
+                  <div class="columns is-vcentered is-flex is-align-items-center ">
                     <div class="column is-half is-flex is-justify-content-right">
                       <figure class="image is-64x64">
                         <img
@@ -98,7 +98,7 @@
                       <p class="has-text-centered div-text-small">{{ data['daily'][1]['weather'][0]['description']
                         }}</p>
                     </div>
-                    <div class="column is-flex is-align-items-center">
+                    <div class="column is-flex is-align-items-center is-justify-content-center">
                       <p class="has-text-centered div-text-small">
                         <span class="has-text-grey-light">{{data['daily'][1]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][1]['temp']['max']|round }}°</span>
                       </p>
@@ -119,7 +119,7 @@
                       <p class="has-text-centered div-text-small">{{ data['daily'][2]['weather'][0]['description']
                         }}</p>
                     </div>
-                    <div class="column is-flex is-align-items-center">
+                    <div class="column is-flex is-align-items-center is-justify-content-center">
                       <p class="has-text-centered div-text-small">
                         <span class="has-text-grey-light">{{data['daily'][2]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][2]['temp']['max']|round }}°</span>
                       </p>
@@ -140,7 +140,7 @@
                       <p class="has-text-centered div-text-small">{{ data['daily'][3]['weather'][0]['description']
                         }}</p>
                     </div>
-                    <div class="column is-flex is-align-items-center">
+                    <div class="column is-flex is-align-items-center is-justify-content-center">
                       <p class="has-text-centered div-text-small">
                         <span class="has-text-grey-light">{{data['daily'][3]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][3]['temp']['max']|round }}°</span>
                       </p>
@@ -161,14 +161,14 @@
                       <p class="has-text-centered div-text-small">{{ data['daily'][4]['weather'][0]['description']
                         }}</p>
                     </div>
-                    <div class="column is-flex is-align-items-center">
+                    <div class="column is-flex is-align-items-center is-justify-content-center">
                       <p class="has-text-centered div-text-small">
                         <span class="has-text-grey-light">{{data['daily'][4]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][4]['temp']['max']|round }}°</span>
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="column">
+                <div class="column border-day">
                   <p class="day-forecast"><strong>{{ data['daily'][5]['dt'] | format_datetime(data["timezone"], 'date') }}</strong></p>
                   <div class="is-flex is-justify-content-center ">
                     <div class="image is-64x64">
@@ -182,7 +182,7 @@
                       <p class="has-text-centered div-text-small">{{ data['daily'][5]['weather'][0]['description']
                         }}</p>
                     </div>
-                    <div class="column is-flex is-align-items-center">
+                    <div class="column is-flex is-align-items-center is-justify-content-center">
                       <p class="has-text-centered div-text-small">
                         <span class="has-text-grey-light">{{data['daily'][5]['temp']['min']|round }}°</span> | <span class="has-text-grey has-text-weight-semibold" >{{data['daily'][5]['temp']['max']|round }}°</span>
                       </p>

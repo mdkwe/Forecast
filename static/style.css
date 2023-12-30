@@ -23,6 +23,7 @@
   .border-day{
       border-inline-end-style: solid ;
       border-inline-end-width: 1px;
+      color: orangered;
   }
   
   /* Auto completed address Suggestions */
