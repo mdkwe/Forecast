@@ -25,6 +25,10 @@
       border-inline-end-width: 1px;
       color: orangered;
   }
+
+  .border-last{
+    color: orangered;
+}
   
   /* Auto completed address Suggestions */
   .autocomplete-container {

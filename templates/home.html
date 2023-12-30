@@ -21,7 +21,7 @@
 
       <a class="navbar-item" href="{{ url_for('about') }}"> About this project </a>
 
-      <a class="navbar-item"  href="{{ url_for('contact') }}"> Contact </a>
+      <a class="navbar-item" href="{{ url_for('contact') }}"> Contact </a>
     </div>
   </div>
 </nav>
@@ -30,12 +30,12 @@
 {% block content %}
 <section class="section">
   <div class="container has-text-centered">
-    <div class="columns is-flex is-text is-vcentered is-fullheight">
+    <div class="columns is-flex-wrap-wrap">
       <div class="column is-two-fifths">
         <div>
           <figure class="image">
             <img class="has-ratio" width="1280" height="720"
-              src="{{ url_for('static', filename='img/html/walpaper.png') }}"></iframe>
+              src="{{ url_for('static', filename='img/html/walpaper.png') }}">
           </figure>
         </div>
       </div>
@@ -51,15 +51,15 @@
           </p>
         </div>
         <form id="locationForm" action="{{ url_for('search') }}" method="post">
-          <div class=" field is-grouped mt-5 is-flex is-align-items-center">
+          <div class="field is-grouped mt-5 is-flex is-align-items-center">
             <div class="control is-expanded">
-              <div id="autocomplete" class="address-field  autocomplete-container"></div>
+              <div id="autocomplete" class="address-field autocomplete-container"></div>
               <input type="hidden" id="selectedCityName" name="cityName">
               <input type="hidden" id="selectedCityLat" name="cityLat">
               <input type="hidden" id="selectedCityLon" name="cityLon">
             </div>
             <div class="control">
-              <button  id="locationForm"  type="submit" class="button is-warning">Search</button>
+              <button id="locationForm" type="submit" class="button is-warning">Search</button>
             </div>
           </div>
         </form>
