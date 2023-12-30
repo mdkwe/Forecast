@@ -38,5 +38,5 @@ def search():
 app.jinja_env.filters['format_datetime'] = format_datetime
 app.jinja_env.filters['convert_mps_to_kph'] = convert_mps_to_kph
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
