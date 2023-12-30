@@ -67,8 +67,8 @@ python main.py
 
 ## TO DO List (Future Enhancements)
 
-[ ] Implement User Authentication for personalized experiences as message for daily update about weather.
-[ ] Implement additional error handling and validation for user inputs.
-[ ] Develop a mobile-responsive design.
-[ ] Optimize API usage to reduce load times
-[ ] Improve UI/UX design for a more engaging user interface.
+- [ ] Implement User Authentication for personalized experiences as message for daily update about weather.
+- [ ] Implement additional error handling and validation for user inputs.
+- [ ] Develop a mobile-responsive design.
+- [ ] Optimize API usage to reduce load times
+- [ ] Improve UI/UX design for a more engaging user interface.
