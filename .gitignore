@@ -1,7 +1,6 @@
 __pycache__
-app/.env
+.env
 venv/
 .vscode
-# lib
-# app.yaml
-# appengine_config.py
+app.yaml
+.gcloudignore
