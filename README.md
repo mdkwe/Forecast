@@ -7,8 +7,8 @@ The Weather Forecast Application is a web-based tool providing current and futur
 
 Here are some screenshots showcasing the interface:
 
-- ![Forecast. Home page.](app/static/img/html/Forecast_Home.png)
-- ![Forecast. Search page example.](app/static/img/html/Forecast_Search.png)
+- ![Forecast. Home page.](static/img/html/Forecast_Home.png)
+- ![Forecast. Search page example.](static/img/html/Forecast_Search.png)
 
 ## Live Preview
 
@@ -32,8 +32,8 @@ To set up the project locally:
 
 1. **Clone the Repository**:
 ```bash
-git clone [repository-url]
-cd [project-directory]
+git clone https://github.com/mdkwe/Forecast.git
+cd Forecast
 ```
 
 2. **Create a Virtual Environment**:
@@ -63,7 +63,7 @@ API_KEY_MAIL = '[Your Web3forms API Key]'
 
 4.Run the Application
 ```bash
-python app/run.py
+python app.py
 ```
 
 ## TO DO List (Future Enhancements)
