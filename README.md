@@ -12,7 +12,7 @@ Here are some screenshots showcasing the interface:
 
 ## Live Preview
 
-Access a live preview of the application, hosted on Google Cloud: [Weather Forecast Application Preview](URL_TO_GOOGLE_CLOUD_PREVIEW)
+Access a live preview of the application, hosted on Google Cloud: [Weather Forecast Application Preview](https://forecast-409614.ew.r.appspot.com/)
 
 ## Input/Output Model of the Backend
 
